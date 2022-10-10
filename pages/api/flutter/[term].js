@@ -1,3 +1,5 @@
+/** @format */
+
 import { getAccessToken, withApiAuthRequired } from "@auth0/nextjs-auth0";
 
 export default withApiAuthRequired(async function handler(req, res) {
@@ -28,7 +30,7 @@ export default withApiAuthRequired(async function handler(req, res) {
             pipeline: [
               {
                 $search: {
-                  index: "default",
+                  index: "searchFlutters",
                   text: {
                     query: term,
                     path: {
